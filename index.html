@@ -1,137 +1,164 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oniro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo img {
-      width: 50px;
-    }
-    .menu-toggle {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .language-switcher {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-    }
-    .menu {
-      display: none;
-      flex-direction: column;
-      background-color: #111;
-      padding: 1rem;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 200px;
-    }
-    .menu a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 0;
-    }
-    .show {
-      display: flex;
-    }
-    main {
-      text-align: center;
-      padding: 2rem;
-    }
-    .section {
-      margin: 3rem auto;
-      max-width: 800px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 12px;
-    }
-    .btn-wallet {
-      background-color: #9333ea;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 50px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a29bfe;
+}
+
+.language-switcher {
+  border: 1px solid #a29bfe;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.language-switcher:hover {
+  background-color: #a29bfe;
+  color: #1a1a2e;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero img {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #a29bfe;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #dfe6e9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #81ecec;
+}
+
+.section p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #b2bec3;
+}
+
+.btn {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #a29bfe;
+  color: #1a1a2e;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
   </style>
-</head><body>
-  <div class="language-switcher">
-    <select>
-      <option value="en" selected>EN</option>
-      <option value="fa">FA</option>
-      <option value="es">ES</option>
-      <option value="fr">FR</option>
-      <option value="de">DE</option>
-    </select>
-  </div>  <header>
+</head>
+<body>
+  <header>
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/Oniro2025/Oniro_site/main/oniro-logo.png" alt="Oniro Logo" />
-      <h1>Oniro</h1>
+      <img src="https://oniro.netlify.app/your-logo-path.png" alt="Oniro Logo">
+      <h2>Oniro</h2>
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </header>  <div class="menu" id="menu">
-    <a href="#tokenomics">Tokenomics</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#stepnext">Next Steps</a>
-    <a href="#">Connect Wallet</a>
-  </div>  <main>
-    <div class="section" id="tokenomics">
-      <h2>Tokenomics</h2>
-      <p>Total Supply: 100,000,000 ONIRO</p>
-      <ul style="text-align:left">
-        <li>Presale: 20M</li>
-        <li>Exchange Launch: 1M</li>
-        <li>Staking Rewards (Locked 12mo): 9M</li>
-        <li>Locked (DAO Vote): 50M</li>
-        <li>Team Vesting (2026 onwards): 20M (5M/year)</li>
-      </ul>
-    </div><div class="section" id="roadmap">
-  <h2>Roadmap</h2>
-  <ul style="text-align:left">
-    <li>✅ Website Launch</li>
-    <li>✅ Smart Contract Deployment on Solana</li>
-    <li>🚧 Presale Launch</li>
-    <li>🚧 NFT Integration & Vote Dashboard</li>
-    <li>🔜 Farming Project Development</li>
-  </ul>
-</div>
-
-<div class="section" id="stepnext">
-  <h2>Next Step</h2>
-  <p>Connect your wallet, participate in presale, and help us build the future of decentralized farming.</p>
-  <button class="btn-wallet">Connect Wallet</button>
-</div>
-
-  </main>  <footer>
-    &copy; 2025 Oniro Project. Built with vision.
-  </footer>  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('show');
-    }
-  </script></body></html>
+    <nav>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#stake">Stake</a>
+      <a href="#vote">Vote</a>
+      <a href="#connect">Connect Wallet</a>
+    </nav>
+    <div class="language-switcher">EN | FA</div>
+  </header>  <section class="hero">
+    <img src="https://oniro.netlify.app/your-logo-path.png" alt="Oniro">
+    <h1>Welcome to Oniro</h1>
+    <p>Empowering Web3 creators with decentralized AI animation. Oniro brings your stories to life on the Solana blockchain.</p>
+    <button class="btn">Buy Token</button>
+  </section>  <section id="tokenomics" class="section">
+    <h2>Tokenomics</h2>
+    <p>100M total supply. 20M presale. 1M DEX liquidity. 9M locked staking rewards. 50M locked governance. 20M unlocked from 2026. All on Solana.</p>
+  </section>  <section id="roadmap" class="section">
+    <h2>Roadmap</h2>
+    <p>Phase 1: Launch site, token, and community. Phase 2: Fund AI & animation studio. Phase 3: Public DEX & ecosystem expansion.</p>
+  </section>  <footer>
+    &copy; 2025 Oniro Project. Built on Solana.
+  </footer>
+</body>
+</html>
