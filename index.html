@@ -1,89 +1,107 @@
- <!DOCTYPE html><html lang="fa">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oniro | پروژه هوش مصنوعی</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oniro Token</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Tahoma, sans-serif;
-      background: linear-gradient(to bottom, #1e1b4b, #312e81);
-      color: white;
       margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
-    header {
-      background-color: #4c1d95;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section {
-      background-color: #2e1065;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .section h2 {
-      margin-top: 0;
-      color: #c084fc;
-    }
-    .button {
-      background-color: #8b5cf6;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, #2b1055, #7597de);
       color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .score-box {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.2rem;
-    }
-    .score-box img {
-      width: 24px;
-      height: 24px;
-    }
+      text-align: center;
+    }header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.language-selector {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.btn-group {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background: #ffffff22;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: #2b1055;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.score img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+footer {
+  margin-top: 5rem;
+  padding: 2rem;
+  background: #ffffff11;
+}
+
   </style>
 </head>
 <body>
   <header>
-    به پروژه Oniro خوش آمدید
-  </header>
-  <div class="container"><div class="section">
-  <h2>🎖️ امتیاز شما</h2>
-  <div class="score-box">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Diamond_icon.png" alt="الماس">
-    <span>امتیاز: 1200</span>
-  </div>
-</div>
-
-<div class="section">
-  <h2>🔐 اتصال کیف پول</h2>
-  <p>برای استفاده کامل از امکانات سایت، کیف پول سولانا (مثل Phantom) خود را متصل کنید.</p>
-  <button class="button">اتصال کیف پول</button>
-</div>
-
-<div class="section">
-  <h2>🗳️ رای‌گیری</h2>
-  <p>با هر 1000 توکن قفل‌شده، یک امتیاز رأی‌گیری دریافت می‌کنید.</p>
-  <button class="button">ورود به رای‌گیری</button>
-</div>
-
-<div class="section">
-  <h2>📥 قفل‌کردن توکن برای رای‌گیری</h2>
-  <p>توکن‌های خود را برای حداقل ۱۲ ماه قفل کنید و از جوایز ویژه بهره‌مند شوید.</p>
-  <button class="button">قفل‌کردن توکن</button>
-</div>
-
-  </div>
+    <div class="logo">Oniro</div>
+    <select class="language-selector">
+      <option value="en">English</option>
+      <option value="fa">فارسی</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>  <h1>Welcome to Oniro Project</h1>
+  <p>Secure, Decentralized, and Visionary</p>  <div class="btn-group">
+    <button class="btn">Buy Token</button>
+    <button class="btn">Stake</button>
+    <button class="btn">Vote</button>
+    <button class="btn">Tokenomics</button>
+    <button class="btn">About Us</button>
+  </div>  <div class="score">
+    <img src="https://cdn-icons-png.flaticon.com/512/2107/2107957.png" alt="Diamond Icon" />
+    <span>User Score: <strong>1245</strong></span>
+  </div>  <footer>
+    &copy; 2025 Oniro | All rights reserved
+  </footer>
 </body>
 </html>
