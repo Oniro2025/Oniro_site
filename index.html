@@ -1,161 +1,70 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oniro | Future of AI & Animation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
-      overflow-x: hidden;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    .hamburger {
-      font-size: 1.8rem;
-      cursor: pointer;
-    }
-    nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    nav.active {
-      display: flex;
-    }
-    nav a {
-      padding: 1rem 2rem;
-      text-decoration: none;
-      color: white;
-      border-bottom: 1px solid #444;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .hero img {
-      width: 180px;
-      margin: 1rem auto;
-    }
-    .section {
-      padding: 2rem;
-    }
-    .tokenomics, .roadmap {
-      background-color: rgba(255, 255, 255, 0.05);
-      margin: 2rem;
-      padding: 2rem;
-      border-radius: 15px;
-    }
-    .wallet-connect, .language-switch, .login-register {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    button {
-      padding: 0.8rem 1.5rem;
-      background-color: #6a00f4;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #111;
-      margin-top: 2rem;
-    }
-  </style>
-</head><body>
-  <header>
-    <div class="logo">
-      <img src="https://i.imgur.com/I9ElwE7.png" alt="Oniro Logo">
-      <h2>Oniro</h2>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </header>  <nav id="menu">
-    <a href="#buy">Buy Token</a>
-    <a href="#stake">Stake</a>
-    <a href="#vote">Vote</a>
+import React from "react"; import { createRoot } from "react-dom/client"; import "./styles.css";
+
+const App = () => { return ( <div className="bg-gradient-to-br from-purple-900 via-purple-600 to-indigo-900 min-h-screen text-white font-sans"> <header className="flex items-center justify-between p-4 border-b border-purple-400"> <div className="text-3xl font-bold">ONIRO</div> <div className="md:hidden"> <button id="menu-btn" className="focus:outline-none"> <svg
+className="w-8 h-8"
+fill="none"
+stroke="currentColor"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"
+> <path
+strokeLinecap="round"
+strokeLinejoin="round"
+strokeWidth="2"
+d="M4 6h16M4 12h16M4 18h16"
+></path> </svg> </button> </div> <div className="hidden md:flex items-center space-x-4"> <button className="bg-purple-700 px-3 py-1 rounded">Connect Wallet</button> <select className="bg-purple-700 px-2 py-1 rounded"> <option>EN</option> <option>FA</option> <option>FR</option> <option>AR</option> </select> </div> </header>
+
+<nav id="mobile-menu" className="hidden flex-col space-y-4 p-4 md:hidden">
     <a href="#about">About Us</a>
-    <a href="#lang">🌐 Language</a>
-    <a href="#connect">🔐 Connect Wallet</a>
-    <a href="#login">👤 Login/Register</a>
-  </nav>  <section class="hero">
-    <h1>Welcome to Oniro</h1>
-    <img src="https://i.imgur.com/I9ElwE7.png" alt="Oniro logo">
-    <p>The AI-powered token to revolutionize 3D animation from text prompts.</p>
-  </section>  <section class="section tokenomics">
-    <h2>🧮 Tokenomics</h2>
-    <p>Total Supply: 100,000,000 ONIX</p>
-    <ul>
-      <li>20M Pre-sale</li>
-      <li>1M Listing</li>
-      <li>9M Rewards (1yr lock)</li>
-      <li>50M Locked</li>
-      <li>20M vested from 2026 (5M/year)</li>
-    </ul>
-  </section>  <section class="section roadmap">
-    <h2>🗺️ Roadmap</h2>
-    <ul>
-      <li>Phase 1: Website + Token Launch</li>
-      <li>Phase 2: Farming & Wallet Connection</li>
-      <li>Phase 3: AI to Animation MVP</li>
-    </ul>
-  </section>  <div class="wallet-connect">
-    <button onclick="connectWallet()">🔐 Connect Wallet</button>
-  </div>  <div class="language-switch">
-    <button onclick="switchLang('en')">EN</button>
-    <button onclick="switchLang('fa')">FA</button>
-    <button onclick="switchLang('fr')">FR</button>
-    <button onclick="switchLang('ar')">AR</button>
-  </div>  <div class="login-register">
-    <button>👤 Login</button>
-    <button>📝 Register</button>
-  </div>  <footer class="footer">
-    © 2025 Oniro Project | Built on Solana | Inspired by Dreams
-  </footer>  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('active');
-    }
+    <a href="#buy">Buy Token (Coming Soon)</a>
+    <a href="#stake">Stake (Coming Soon)</a>
+    <a href="#vote">Voting (Coming Soon)</a>
+    <a href="#holders">Holders Table (Coming Soon)</a>
+    <a href="#contact">Contact</a>
+    <a href="#lang">Languages</a>
+  </nav>
 
-    function switchLang(lang) {
-      alert('Language switch coming soon: ' + lang);
-    }
+  <main className="text-center px-4 py-10">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flat_tick_icon.svg" // Replace with actual logo
+      alt="Oniro Logo"
+      className="w-32 mx-auto mb-6"
+    />
+    <h1 className="text-4xl font-bold mb-4">Welcome to Oniro</h1>
+    <p className="text-lg max-w-2xl mx-auto">
+      A revolutionary memecoin with purpose — building a farm that feeds its own token ecosystem.
+      Every 4 years, a portion of the profit goes to the token pool to increase value.
+    </p>
 
-    async function connectWallet() {
-      if (window.phantom && window.phantom.solana) {
-        try {
-          const resp = await window.phantom.solana.connect();
-          alert('Wallet connected: ' + resp.publicKey.toString());
-        } catch (err) {
-          alert('Connection failed: ' + err.message);
-        }
-      } else {
-        alert('Phantom wallet not found. Please install it.');
-        window.open("https://phantom.app", "_blank");
-      }
-    }
-  </script></body></html>
+    <section id="tokenomics" className="mt-12">
+      <h2 className="text-2xl font-bold mb-2">Tokenomics</h2>
+      <ul className="space-y-1">
+        <li>Presale: 20,000,000 ONIX</li>
+        <li>Exchange Listing: 1,000,000 ONIX</li>
+        <li>Staking Rewards: 9,000,000 ONIX (1yr lock)</li>
+        <li>Locked Reserve: 50,000,000 ONIX (community votes)</li>
+        <li>Yearly Unlock: 20,000,000 ONIX (5M per year from 2026)</li>
+      </ul>
+    </section>
+
+    <section id="roadmap" className="mt-12">
+      <h2 className="text-2xl font-bold mb-2">Roadmap</h2>
+      <ol className="space-y-1 list-decimal list-inside">
+        <li>Phase 1 – Token Creation & Presale</li>
+        <li>Phase 2 – Exchange Launch</li>
+        <li>Phase 3 – Farm Infrastructure</li>
+        <li>Phase 4 – AI Project Launch</li>
+        <li>Phase 5 – Decentralized Oniro Chain</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer className="text-center py-6 text-sm border-t border-purple-400">
+    <p>Contact us: <a href="https://t.me/Oniro2025" className="underline">Telegram</a> | <a href="https://x.com/Oniro2025" className="underline">X</a> | <a href="https://instagram.com/Oniro2025" className="underline">Instagram</a></p>
+    <p>&copy; 2025 Oniro Project. All rights reserved.</p>
+  </footer>
+</div>
+
+); };
+
+const container = document.getElementById("root"); const root = createRoot(container); root.render(<App />);
+
