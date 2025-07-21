@@ -1,105 +1,107 @@
 <!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Oniro Token - A new vision for decentralized finance." />
-  <title>Oniro Token</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      color: #222;
-    }
-    header {
-      background-color: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    header img {
-      height: 100px;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h2 {
-      color: #4b0082;
-    }
-    .coming-soon {
-      opacity: 0.5;
-      font-style: italic;
-    }
-    footer {
-      background-color: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .social-links a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="https://chat.openai.com/share/logo-oniro-temp.jpg" alt="Oniro Logo" />
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-    </nav>
-  </header>  <section id="about">
-    <h2>About Oniro</h2>
-    <p>Oniro is more than just a token — it's a dream brought to life through the power of blockchain. Built on the Solana network, Oniro is designed to reward community, innovation, and long-term vision.</p>
-  </section>  <section id="tokenomics">
-    <h2>Tokenomics</h2>
-    <p>Total Supply: 100,000,000 ONI</p>
-    <ul>
-      <li>50% Community Distribution</li>
-      <li>20% Development & Ecosystem</li>
-      <li>15% Liquidity Pool</li>
-      <li>10% Strategic Partners</li>
-      <li>5% Reserve</li>
-    </ul>
-  </section>  <section id="roadmap">
-    <h2>Roadmap</h2>
-    <ul>
-      <li>✅ Token creation on Solana</li>
-      <li>✅ Website launch</li>
-      <li>🔜 Community airdrops</li>
-      <li>🔜 CEX listing</li>
-      <li>🔜 Launch of Oniro Wallet</li>
-    </ul>
-  </section>  <section class="coming-soon">
-    <h2>Oniro Wallet</h2>
-    <p>Coming soon...</p><h2>Staking</h2>
-<p>Coming soon...</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ONIRO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(to right, #6a0dad, #b19cd9);
+        color: white;
+      }
+      .countdown {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header class="flex justify-between items-center p-4 bg-purple-900 text-white">
+      <h1 class="text-3xl font-bold">ONIRO</h1>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-white focus:outline-none">☰</button>
+        <div id="menu" class="hidden absolute right-4 mt-2 w-48 bg-purple-800 rounded-md shadow-lg z-10">
+          <a href="#tokenomics" class="block px-4 py-2">Tokenomics</a>
+          <a href="#roadmap" class="block px-4 py-2">Roadmap</a>
+          <a href="#socials" class="block px-4 py-2">Socials</a>
+          <a href="#" class="block px-4 py-2">Connect Wallet</a>
+        </div>
+      </div>
+    </header><main class="flex-grow flex flex-col justify-center items-center text-center p-8">
+  <h2 class="text-4xl mb-4">Future of Decentralized Energy</h2>
+  <p class="mb-6">Backed by forest-based tokenomics and a strong roadmap.</p>
+  <div class="countdown mb-8" id="countdown"></div>
+  <a href="#tokenomics" class="bg-white text-purple-800 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">Learn More</a>
+</main>
 
-<h2>Governance</h2>
-<p>Coming soon...</p>
+<section id="tokenomics" class="p-8 bg-purple-700">
+  <h2 class="text-2xl mb-4">Tokenomics</h2>
+  <ul class="list-disc list-inside">
+    <li>50% Locked as Reserve (unlockable by governance vote)</li>
+    <li>20% Team Allocation (5% released each year from 2026 to 2030)</li>
+    <li>20% Presale</li>
+    <li>10% DEX Launch</li>
+  </ul>
+</section>
 
-  </section>  <footer>
-    <p>Follow us on:</p>
-    <div class="social-links">
-      <a href="#">Twitter</a>
-      <a href="#">Telegram</a>
-      <a href="#">Discord</a>
-    </div>
-    <p>&copy; 2025 Oniro Token. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<section id="roadmap" class="p-8 bg-purple-800">
+  <h2 class="text-2xl mb-4">Roadmap</h2>
+  <ol class="list-decimal list-inside">
+    <li>Phase 1: Token Creation</li>
+    <li>Phase 2: Presale</li>
+    <li>Phase 3: Wood Farm Development</li>
+    <li>Phase 4: Token Launch on Exchange</li>
+    <li>Phase 5: Building Independent Blockchain</li>
+  </ol>
+</section>
+
+<section id="socials" class="p-8 bg-purple-900">
+  <h2 class="text-2xl mb-4">Join Us</h2>
+  <ul class="space-y-2">
+    <li>Instagram: <a href="https://instagram.com/oniro.io" class="underline">@oniro.io</a></li>
+    <li>X (Twitter): <a href="https://x.com/Oniro" class="underline">@Oniro</a></li>
+    <li>Telegram: <a href="https://t.me/oniro_io" class="underline">@oniro_io</a></li>
+  </ul>
+</section>
+
+<footer class="p-4 bg-purple-950 text-center">
+  <p>&copy; 2025 Oniro. All rights reserved.</p>
+</footer>
+
+<script>
+  // Toggle menu
+  document.getElementById('menu-button').addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('hidden');
+  });
+
+  // Countdown timer from Jan 1, 2026 to Jan 1, 2030
+  const countdown = document.getElementById('countdown');
+  const endDate = new Date('January 1, 2030 00:00:00').getTime();
+  const startDate = new Date('January 1, 2026 00:00:00').getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const total = endDate - startDate;
+    const remaining = Math.max(endDate - now, 0);
+
+    const percent = 100 - Math.floor((remaining / total) * 100);
+
+    const years = Math.floor(remaining / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((remaining % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+
+    countdown.innerHTML = `Rewards Start: ${years}y ${days}d<br><span class="text-sm">Progress: ${percent}%</span>`;
+
+    if (remaining <= 0) {
+      clearInterval(timer);
+      countdown.innerHTML = 'Reward Distribution Complete';
+    }
+  }
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+  </body>
+  </html>
