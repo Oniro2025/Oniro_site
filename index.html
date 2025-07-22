@@ -2,106 +2,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ONIRO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <title>ONIRO Token</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-        font-family: 'Orbitron', sans-serif;
-        background: linear-gradient(to right, #6a0dad, #b19cd9);
-        color: white;
-      }
-      .countdown {
-        font-size: 2rem;
+        font-family: 'Inter', sans-serif;
       }
     </style>
   </head>
-  <body class="flex flex-col min-h-screen">
-    <header class="flex justify-between items-center p-4 bg-purple-900 text-white">
-      <h1 class="text-3xl font-bold">ONIRO</h1>
+  <body class="bg-gradient-to-b from-purple-100 to-purple-800 text-white">
+    <header class="flex items-center justify-between px-4 py-3 bg-purple-900">
+      <div class="text-2xl font-bold">ONIRO</div>
       <div class="md:hidden">
-        <button id="menu-button" class="text-white focus:outline-none">☰</button>
-        <div id="menu" class="hidden absolute right-4 mt-2 w-48 bg-purple-800 rounded-md shadow-lg z-10">
-          <a href="#tokenomics" class="block px-4 py-2">Tokenomics</a>
-          <a href="#roadmap" class="block px-4 py-2">Roadmap</a>
-          <a href="#socials" class="block px-4 py-2">Socials</a>
-          <a href="#" class="block px-4 py-2">Connect Wallet</a>
-        </div>
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-    </header><main class="flex-grow flex flex-col justify-center items-center text-center p-8">
-  <h2 class="text-4xl mb-4">Future of Decentralized Energy</h2>
-  <p class="mb-6">Backed by forest-based tokenomics and a strong roadmap.</p>
-  <div class="countdown mb-8" id="countdown"></div>
-  <a href="#tokenomics" class="bg-white text-purple-800 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">Learn More</a>
-</main>
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#socials">Socials</a>
+      </nav>
+    </header><div id="mobile-menu" class="hidden bg-purple-900 p-4 md:hidden">
+  <a class="block mb-2" href="#tokenomics">Tokenomics</a>
+  <a class="block mb-2" href="#roadmap">Roadmap</a>
+  <a class="block mb-2" href="#socials">Socials</a>
+  <a class="block mb-2 text-gray-400 cursor-default">🗳️ Voting - Coming Soon</a>
+  <a class="block mb-2 text-gray-400 cursor-default">🛒 Buy Token - Coming Soon</a>
+  <a class="block mb-2 text-gray-400 cursor-default">📥 Staking - Coming Soon</a>
+  <a class="block mb-2 text-gray-400 cursor-default">🔗 Connect Wallet - Coming Soon</a>
+</div>
 
-<section id="tokenomics" class="p-8 bg-purple-700">
-  <h2 class="text-2xl mb-4">Tokenomics</h2>
-  <ul class="list-disc list-inside">
-    <li>50% Locked as Reserve (unlockable by governance vote)</li>
-    <li>20% Team Allocation (5% released each year from 2026 to 2030)</li>
-    <li>20% Presale</li>
-    <li>10% DEX Launch</li>
+<section class="text-center py-16">
+  <h1 class="text-5xl font-bold mb-6">Welcome to ONIRO</h1>
+  <p class="text-lg mb-4">A Visionary Token Backed by Community and Long-Term Vision</p>
+  <div id="countdown" class="text-4xl font-mono mt-8"></div>
+  <p class="text-sm mt-2">Countdown to 2030 profit distribution</p>
+</section>
+
+<section id="tokenomics" class="px-6 py-12 bg-purple-700">
+  <h2 class="text-3xl font-bold mb-4">Tokenomics</h2>
+  <ul class="list-disc pl-6">
+    <li>50% locked as backing, released via voting</li>
+    <li>20% for team, 5% released annually from 2026–2030</li>
+    <li>20% for presale</li>
+    <li>10% for exchange listing</li>
   </ul>
 </section>
 
-<section id="roadmap" class="p-8 bg-purple-800">
-  <h2 class="text-2xl mb-4">Roadmap</h2>
-  <ol class="list-decimal list-inside">
-    <li>Phase 1: Token Creation</li>
-    <li>Phase 2: Presale</li>
-    <li>Phase 3: Wood Farm Development</li>
-    <li>Phase 4: Token Launch on Exchange</li>
-    <li>Phase 5: Building Independent Blockchain</li>
+<section id="roadmap" class="px-6 py-12 bg-purple-600">
+  <h2 class="text-3xl font-bold mb-4">Roadmap</h2>
+  <ol class="list-decimal pl-6">
+    <li>Token Creation</li>
+    <li>Presale Launch</li>
+    <li>Wood Farm Development</li>
+    <li>Token Launch on Exchange</li>
+    <li>Building Independent Blockchain</li>
   </ol>
 </section>
 
-<section id="socials" class="p-8 bg-purple-900">
-  <h2 class="text-2xl mb-4">Join Us</h2>
-  <ul class="space-y-2">
-    <li>Instagram: <a href="https://instagram.com/oniro.io" class="underline">@oniro.io</a></li>
-    <li>X (Twitter): <a href="https://x.com/Oniro" class="underline">@Oniro</a></li>
-    <li>Telegram: <a href="https://t.me/oniro_io" class="underline">@oniro_io</a></li>
+<section id="socials" class="px-6 py-12 bg-purple-500">
+  <h2 class="text-3xl font-bold mb-4">Socials</h2>
+  <p>Follow us:</p>
+  <ul class="mt-2">
+    <li>Twitter (X): <a class="underline" href="https://x.com/Oniro" target="_blank">@Oniro</a></li>
+    <li>Instagram: <a class="underline" href="https://instagram.com/oniro.io" target="_blank">oniro.io</a></li>
+    <li>Telegram: <a class="underline" href="https://t.me/oniro_io" target="_blank">t.me/oniro_io</a></li>
   </ul>
 </section>
 
-<footer class="p-4 bg-purple-950 text-center">
-  <p>&copy; 2025 Oniro. All rights reserved.</p>
+<footer class="text-center py-6 bg-purple-900 text-sm">
+  &copy; 2025 Oniro Token. All rights reserved.
 </footer>
 
 <script>
-  // Toggle menu
-  document.getElementById('menu-button').addEventListener('click', () => {
-    const menu = document.getElementById('menu');
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
 
-  // Countdown timer from Jan 1, 2026 to Jan 1, 2030
-  const countdown = document.getElementById('countdown');
-  const endDate = new Date('January 1, 2030 00:00:00').getTime();
-  const startDate = new Date('January 1, 2026 00:00:00').getTime();
-
-  function updateCountdown() {
+  // Countdown timer to 2030-01-01
+  const targetDate = new Date("2030-01-01T00:00:00Z").getTime();
+  setInterval(() => {
     const now = new Date().getTime();
-    const total = endDate - startDate;
-    const remaining = Math.max(endDate - now, 0);
+    const distance = targetDate - now;
 
-    const percent = 100 - Math.floor((remaining / total) * 100);
+    const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const years = Math.floor(remaining / (1000 * 60 * 60 * 24 * 365));
-    const days = Math.floor((remaining % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
-
-    countdown.innerHTML = `Rewards Start: ${years}y ${days}d<br><span class="text-sm">Progress: ${percent}%</span>`;
-
-    if (remaining <= 0) {
-      clearInterval(timer);
-      countdown.innerHTML = 'Reward Distribution Complete';
-    }
-  }
-
-  const timer = setInterval(updateCountdown, 1000);
-  updateCountdown();
+    document.getElementById("countdown").innerText = `${years}y ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
 </script>
 
   </body>
-  </html>
+</html>
